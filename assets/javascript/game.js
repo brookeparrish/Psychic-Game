@@ -23,7 +23,6 @@ guessesLeftText.textContent = guessesLeft;
 //Function for when user presses key, user guesses letter, gets added to letters guessed variable, and guesses left is updated
 document.onkeyup = function(event) {
     var computerLetter = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    console.log(computerLetter);
 
     lettersGuessed.push(event.key);
 

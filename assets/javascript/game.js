@@ -14,6 +14,10 @@ var lossesText = document.getElementById("losses-text");
 var guessesLeftText = document.getElementById("guessesLeft-text");
 var userGuessText = document.getElementById("userGuess-text");
 
+winsText.textContent = wins;
+lossesText.textContent = losses;
+guessesLeftText.textContent = guessesLeft;
+
 
 
 //Function for when user presses key, user guesses letter, gets added to letters guessed variable, and guesses left is updated
@@ -29,7 +33,7 @@ document.onkeyup = function(event) {
       resetGame();
       isNewGame = true;
     }
-    else if (guessesLeft === 0) {
+    else if (lettersGuessed.length === 9) {
         losses++;
         lossesText.textContent = losses;
         resetGame();  
